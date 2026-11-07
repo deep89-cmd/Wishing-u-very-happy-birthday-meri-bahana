@@ -1,0 +1,736 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Suman Didi 🥰</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ font-family:'Poppins',sans-serif;
+ background:#190c23;color:white;overflow-x:hidden;
+}
+:root{
+ --pink:#ff80b1;
+ --gold:#ffdda5;
+ --purple:#b98aff;
+}
+#effects{
+ position:fixed;inset:0;
+ pointer-events:none;overflow:hidden;z-index:20;
+}
+.fall{
+ position:absolute;top:-40px;
+ animation:fall linear forwards;
+}
+@keyframes fall{
+ to{transform:translateY(110vh) rotate(700deg);opacity:0}
+}
+@keyframes glow{
+ 50%{text-shadow:0 0 20px #ff75ac,0 0 45px #ff75ac}
+}
+@keyframes float{
+ 50%{transform:translateY(-15px)}
+}
+@keyframes appear{
+ from{opacity:0;transform:translateY(30px)}
+ to{opacity:1;transform:translateY(0)}
+}
+@keyframes heartbeat{
+ 50%{transform:scale(1.18)}
+}
+button{font-family:inherit;cursor:pointer}
+.hero{
+ min-height:100vh;display:flex;align-items:center;
+ justify-content:center;flex-direction:column;
+ text-align:center;padding:35px 18px;
+ background:
+ radial-gradient(circle at 15% 20%,#ff559944,transparent 40%),
+ radial-gradient(circle at 85% 80%,#a34dff44,transparent 40%),
+ linear-gradient(145deg,#180b27,#51183e,#210d32);
+}
+.crown{font-size:65px;animation:float 3s infinite}
+.hero h2{font-size:15px;letter-spacing:3px;color:var(--gold)}
+.hero h1{
+ font-family:'Dancing Script',cursive;
+ font-size:clamp(55px,12vw,100px);
+ color:#ffd9e9;margin:20px 0;
+ animation:glow 3s infinite;
+}
+.hero p{
+ max-width:650px;line-height:2;
+ color:#ffe6f0;margin:12px auto;
+}
+.btn{
+ border:1px solid #ffc0da;border-radius:50px;
+ padding:13px 23px;margin:7px;color:white;
+ background:linear-gradient(100deg,#ff4389,#9844d2);
+ box-shadow:0 0 22px #ff478955;transition:.3s;
+}
+.btn:hover{transform:scale(1.06)}
+section{
+ max-width:1100px;margin:auto;
+ padding:70px 17px;text-align:center;
+}
+.heading{
+ font-family:'Dancing Script',cursive;
+ color:#ffd9e9;font-size:clamp(40px,8vw,60px);
+ margin-bottom:15px;
+}
+.subtitle{color:#f3cbdc;line-height:1.9;margin-bottom:30px}
+.card{
+ background:linear-gradient(145deg,#ffffff19,#ffffff08);
+ border:1px solid #ffffff35;border-radius:23px;
+ padding:25px;margin:20px auto;
+ box-shadow:0 10px 35px #0003;text-align:left;
+}
+.card h3{
+ font-family:'Dancing Script',cursive;
+ font-size:30px;color:var(--gold);margin-bottom:15px;
+}
+.card p{line-height:2.05;font-size:14px;color:#ffeaf2}
+.pink{color:#ffb6d2;font-weight:600}
+.gallery{
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+ gap:20px;
+}
+.photo-card{
+ border:1px solid #ffadd0;border-radius:22px;
+ background:#ffffff12;overflow:hidden;transition:.4s;
+}
+.photo-card:hover{transform:translateY(-7px)}
+.image-area{
+ width:100%;height:310px;background:#301c3a;
+ display:flex;justify-content:center;align-items:center;overflow:hidden;
+}
+.image-area img{width:100%;height:100%;object-fit:cover}
+.image-error{padding:20px;text-align:center;color:#ffcedf;line-height:1.8}
+.caption{padding:18px}
+.caption h3{
+ font-family:'Dancing Script',cursive;
+ font-size:27px;color:var(--gold);margin:10px 0;
+}
+.caption p{color:#ffe8f1;font-size:13px;line-height:1.9}
+.tag{
+ display:inline-block;padding:6px 12px;border-radius:30px;
+ background:#ff77a633;color:#ffd6e5;font-size:11px;
+}
+.grid{
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+ gap:16px;
+}
+.message{
+ text-align:left;border:1px solid #ffffff30;
+ border-radius:20px;padding:22px;
+ background:linear-gradient(145deg,#ff5c9b25,#9855ff20);
+}
+.message h3{
+ font-family:'Dancing Script',cursive;
+ color:var(--gold);font-size:27px;margin-bottom:12px;
+}
+.message p{font-size:13px;line-height:2;color:#ffeaf2}
+.poetry{
+ font-family:'Dancing Script',cursive;color:#ffdfac;
+ text-align:center;font-size:25px;line-height:1.9;
+}
+.timeline{
+ border-left:2px solid #ff83b4;padding-left:22px;
+ margin:30px 0 30px 12px;text-align:left;
+}
+.timeline .card{position:relative}
+.timeline .card:before{
+ content:'🧿';position:absolute;left:-35px;top:20px;
+}
+.hidden{display:none}
+.hidden.show{display:block;animation:appear 1s}
+.surprise{
+ background:linear-gradient(145deg,#ff4a8b33,#9b4ad833);
+ border:1px solid #ffb3d2;border-radius:25px;padding:30px 20px;
+}
+audio{width:100%;margin-top:20px}
+footer{
+ padding:50px 20px;background:#100719;
+ text-align:center;line-height:2.2;color:#ffd6e7;
+}
+footer h2{font-family:'Dancing Script',cursive;font-size:40px}
+@media(max-width:500px){
+ section{padding:55px 14px}
+ .card{padding:20px}
+ .image-area{height:280px}
+}
+</style>
+</head>
+
+<body>
+<div id="effects"></div>
+
+<!-- WELCOME -->
+<header class="hero">
+ <div class="crown">👑</div>
+ <h2>A LITTLE GIFT FROM YOUR BROTHER</h2>
+ <h1>Happy Birthday<br>Suman Didi 🥰</h1>
+
+ <p>
+ Aaj ka din meri us pyari si behan ke naam
+ jiske saath bachpan mein sabse zyada ladaiyan ki...
+ aur jiske bina ab ghar ki raunak bhi adhuri lagti hai.
+ </p>
+
+ <p>Ye chhota sa surprise sirf tumhare liye hai meri pyari Didi. 🫰</p>
+
+ <button class="btn" onclick="go('story')">
+ 🥰 Open Your Surprise
+ </button>
+ <button class="btn" onclick="go('memories')">
+ 📸 Hamari Yaadein
+ </button>
+</header>
+
+<!-- MUSIC -->
+<section>
+ <h2 class="heading">🎵 Ek Gaana Tumhare Naam</h2>
+ <p class="subtitle">
+ Kuch gaane sirf gaane nahi hote... unmein apno ki yaadein hoti hain.
+ </p>
+
+ <div class="card">
+  <h3>Phoolon Ka Taron Ka 🌸</h3>
+  <p>
+   Ye gaana sunna Didi... pata nahi kyun lekin ise sunkar
+   bhai-behan ke rishte ki bahut yaad aati hai.
+   Isliye tumhare liye rakha hai.
+  </p>
+
+  <audio controls preload="metadata">
+   <source src="./song.mp3" type="audio/mpeg">
+   Tumhara browser audio support nahi karta.
+  </audio>
+  <p style="font-size:11px;margin-top:12px">Song: song.mp3</p>
+ </div>
+</section>
+
+<!-- STORY -->
+<section id="story">
+ <h2 class="heading">Meri Pyari Suman Didi 🥰</h2>
+
+ <div class="card">
+  <h3>Kuch Baatein Dil Se...</h3>
+  <p>
+   Suman Didi, sach bataun to kabhi socha nahi tha ki
+   ek din hum dono itne door ho jayenge.
+
+   Bachpan mein to hamari roz ki kahani hi alag thi.
+   Kabhi main tumhe pareshan karta tha
+   kabhi tum mujhse ladti thi.
+
+   Kabhi tumhari cheezein chhupana,
+   kabhi tumhe chidhana
+   aur kabhi-kabhi tumhe maar bhi dena.
+   😂
+
+   Phir tum rote-rote mummy ke paas jaati thi,
+   meri complaint karti thi
+   aur main tumhe mummy se aur daant khilwata tha.
+
+   Us waqt tumhe kitna gussa aata hoga mujh par.
+   Lekin aaj wahi sab yaad karke hasi bhi aati hai
+   aur un dino ko dobara jeene ka mann bhi karta hai.
+
+   <br><br>
+   <span class="pink">
+   Kaash ek baar phir wahi bachpan mil jaata... 🥹
+   </span>
+
+   <br><br>
+   Wahi ghar, wahi masti, wahi hum dono
+   aur mummy ki wahi daant.
+   Aaj samajh aata hai ki wo chhote-chhote pal
+   kitne anmol the.
+  </p>
+ </div>
+</section>
+
+<!-- OUR PHOTOS -->
+<section id="memories">
+ <h2 class="heading">📸 Hamari Yaadon Ka Safar</h2>
+ <p class="subtitle">
+  In tasveeron ko dekhkar samajh aata hai ki waqt kitni jaldi guzar gaya.
+  Pehli teen tasveerein hum dono ki hain. 💙
+ </p>
+
+ <div class="gallery">
+
+  <div class="photo-card">
+   <div class="image-area">
+    <img src="./photo1.jpg" alt="Suman Didi aur bhai ki tasveer"
+     onerror="imageError(this,'photo1.jpg')">
+   </div>
+   <div class="caption">
+    <span class="tag">Kuch Saal Pehle 🥰</span>
+    <h3>Wahi Hum Dono</h3>
+    <p>
+     Ye tasveer dekhkar kitni saari baatein yaad aa jaati hain.
+     Us waqt shayad humein andaaza bhi nahi tha
+     ki aage chalkar ye pal itne khaas lagenge.
+     Aaj in lamhon ko bahut miss karta hoon.
+    </p>
+   </div>
+  </div>
+
+  <div class="photo-card">
+   <div class="image-area">
+    <img src="./photo2.jpg" alt="Middle school ki yaad"
+     onerror="imageError(this,'photo2.jpg')">
+   </div>
+   <div class="caption">
+    <span class="tag">Middle School Days 🌸</span>
+    <h3>School Wale Din</h3>
+    <p>
+     Wo din bhi kitne pyare the.
+     Hamari masti, chhoti-chhoti ladaiyan
+     aur ek doosre ko pareshan karna.
+     Pata hi nahi chala kab bachpan beet gaya.
+    </p>
+   </div>
+  </div>
+
+  <div class="photo-card">
+   <div class="image-area">
+    <img src="./photo3.jpg" alt="Primary school ki yaad"
+     onerror="imageError(this,'photo3.jpg')">
+   </div>
+   <div class="caption">
+    <span class="tag">Primary School Days 🥹</span>
+    <h3>Sabse Pyara Bachpan</h3>
+    <p>
+     Is tasveer mein hamara wo bachpan chhupa hai
+     jahan na koi tension thi na koi zimmedari.
+     Bas khelna, ladna, hansna aur mummy ki daant.
+     Kaash wo din phir laut aate.
+    </p>
+   </div>
+  </div>
+
+ </div>
+</section>
+
+<!-- SUMAN PHOTOS -->
+<section>
+ <h2 class="heading">🌷 Ab Kuch Sirf Tumhari Tasveerein</h2>
+ <p class="subtitle">
+  Aaj ka din tumhara hai meri Didi.
+  Isliye ab kuch tasveerein sirf meri birthday girl ke naam. 🫰
+ </p>
+
+ <div class="gallery">
+
+  <div class="photo-card">
+   <div class="image-area">
+    <img src="./photo4.jpg" alt="Suman Didi ki tasveer"
+     onerror="imageError(this,'photo4.jpg')">
+   </div>
+   <div class="caption">
+    <span class="tag">My Beautiful Sister 🌸</span>
+    <h3>Hamesha Muskurana</h3>
+    <p>
+     Tumhari muskaan hamesha aisi hi bani rahe.
+     Bhagwan tumhe duniya ki har khushi de.
+     Kabhi apni smile mat khona.
+    </p>
+   </div>
+  </div>
+
+  <div class="photo-card">
+   <div class="image-area">
+    <img src="./photo5.jpg" alt="Suman Didi ki tasveer"
+     onerror="imageError(this,'photo5.jpg')">
+   </div>
+   <div class="caption">
+    <span class="tag">My Strong Sister 💙</span>
+    <h3>Meri Pyari Didi</h3>
+    <p>
+     Zindagi mein kitni bhi mushkilein aayein
+     hamesha himmat rakhna.
+     Mujhe yakeen hai tum apne har sapne ko poora karogi.
+    </p>
+   </div>
+  </div>
+
+  <div class="photo-card">
+   <div class="image-area">
+    <img src="./photo6.jpg" alt="Suman Didi ki tasveer"
+     onerror="imageError(this,'photo6.jpg')">
+   </div>
+   <div class="caption">
+    <span class="tag">Birthday Girl 🎂</span>
+    <h3>Always Stay Happy</h3>
+    <p>
+     Tum meri zindagi ki bahut khaas insaan ho.
+     Hamesha khush rehna aur apna khayal rakhna.
+     Tumhari har khushi mere liye khaas hai.
+    </p>
+   </div>
+  </div>
+
+ </div>
+</section>
+
+<!-- CHILDHOOD -->
+<section>
+ <h2 class="heading">😂 Bachpan Ki Kuch Yaadein</h2>
+
+ <div class="timeline">
+  <div class="card">
+   <h3>Jab Main Tumhe Satata Tha</h3>
+   <p>
+    Main bachpan mein kitna shaitaan tha.
+    Tumhe chidhana, tumse ladna aur kabhi-kabhi
+    tumhe rula dena... meri to roz ki aadat thi.
+    😂
+   </p>
+  </div>
+
+  <div class="card">
+   <h3>Mummy Ke Paas Tumhari Complaint</h3>
+   <p>
+    Tum rote-rote mummy ke paas jaati thi
+    aur meri shikayat karti thi.
+    Aur main bhi kitna badmaash tha,
+    tumhe aur daant padwa deta tha.
+    Aaj sochta hoon to bahut hasi aati hai.
+   </p>
+  </div>
+
+  <div class="card">
+   <h3>Aaj Wo Din Bahut Yaad Aate Hain</h3>
+   <p>
+    Aaj na wo roz ki ladaiyan hain
+    na wo bachpan wali masti.
+    Ab to bas duty aur zimmedariyan hain.
+    Kabhi-kabhi dil karta hai ki ek baar phir
+    wahi bachpan jee loon.
+   </p>
+  </div>
+ </div>
+</section>
+
+<!-- APOLOGY -->
+<section>
+ <h2 class="heading">🥹 Dil Se Ek Maafi</h2>
+
+ <div class="card">
+  <h3>Mujhe Maaf Kar Dena Meri Didi</h3>
+  <p>
+   Suman Didi, agar maine zindagi mein kabhi bhi tumhe dukh pahunchaya hai
+   ya bachpan mein apni shararaton se tumhara dil dukhaya hai
+   to mujhe maaf kar dena.
+
+   Kabhi gusse mein kuch galat kaha ho,
+   kabhi tumhari feelings samajh nahi paaya ho
+   to uske liye bhi dil se sorry.
+
+   Us waqt shayad mujhe samajh nahi thi,
+   lekin aaj tumhari feelings aur tumhari khushi mere liye bahut maayne rakhti hain.
+
+   Main apni purani galtiyan badal nahi sakta,
+   lekin aaj itna zaroor keh sakta hoon
+   ki tumhe kabhi jaanbujhkar dukh nahi dena chahta.
+
+   <br><br>
+   <span class="pink">
+   Bachpan mein tumhe bahut rulaya hai maine...
+   ab zindagi bhar tumhari muskaan ki wajah banna chahta hoon. 🫰
+   </span>
+  </p>
+ </div>
+</section>
+
+<!-- ARMY -->
+<section>
+ <h2 class="heading">🫂 Ghar Se Itni Door...</h2>
+
+ <div class="card">
+  <h3>Meri Duty Aur Mera Parivaar</h3>
+  <p>
+   Aaj main Army ki job kar raha hoon
+   aur apne parivaar se bahut door rehta hoon.
+
+   Kabhi din bhar duty hoti hai,
+   kabhi raat ki duty
+   aur kabhi aisi zimmedari hoti hai
+   jahan phone tak use nahi kar sakta.
+
+   Lekin iska matlab ye nahi ki main tum sabko bhool gaya hoon.
+
+   Sach kahun to ghar ki yaad bahut aati hai.
+   Mummy-papa, tum sabki awaazein,
+   ghar ki hasi aur wo chhoti-chhoti baatein
+   sab kuch bahut miss karta hoon.
+
+   <br><br>
+   Jab tumhari call aati hai na
+   to din bhar ki thakan jaise khatam ho jaati hai.
+   Tumse baat karke jo sukoon milta hai
+   wo kisi aur cheez mein nahi milta.
+
+   Kuch der ke liye lagta hai jaise main phir se ghar par hoon.
+
+   <br><br>
+   <span class="pink">
+   Main chahe duniya ke kisi bhi kone mein rahun,
+   mera dil hamesha apne parivaar ke paas rahega. 💙
+   </span>
+  </p>
+ </div>
+</section>
+
+<!-- PROMISES -->
+<section>
+ <h2 class="heading">🧿 Mere Kuch Vaade</h2>
+
+ <div class="grid">
+
+  <div class="message">
+   <h3>Hamesha Saath 🫰</h3>
+   <p>Jab bhi tumhe meri zaroorat ho mujhe yaad karna. Main apni taraf se har mumkin koshish karunga.</p>
+  </div>
+
+  <div class="message">
+   <h3>Tumhari Khushi 🌸</h3>
+   <p>Tumhare saare sapne poore hon aur tumhari zindagi mein hamesha khushiyan rahein. Yahi meri dua hai.</p>
+  </div>
+
+  <div class="message">
+   <h3>Kabhi Akeli Mat Samajhna 🥰</h3>
+   <p>Door rehne ka matlab ye nahi ki tumhara bhai tumhare saath nahi hai. Main hamesha tumhara apna rahunga.</p>
+  </div>
+
+  <div class="message">
+   <h3>Apna Khayal Rakhna 💙</h3>
+   <p>Time par khana khana, apni health ka dhyan rakhna aur faltu ki tension mat lena meri pyari Didi.</p>
+  </div>
+
+  <div class="message">
+   <h3>Hamesha Khush Rehna 🦋</h3>
+   <p>Bhagwan tumhari zindagi ko sukh, shanti, izzat aur khushiyon se bhar de. Tum hamesha muskurati raho.</p>
+  </div>
+
+  <div class="message">
+   <h3>Forever My Sister 🧿</h3>
+   <p>Hamari kitni bhi ladayi ho jaaye, tum meri Didi ho aur hamesha meri sabse pyari behan rahogi.</p>
+  </div>
+
+ </div>
+</section>
+
+<!-- SHAYARI -->
+<section>
+ <h2 class="heading">🌹 Kuch Shayari Tumhare Naam</h2>
+
+ <div class="card">
+  <div class="poetry">
+   Bachpan mein tujhe sataya bahut tha,<br>
+   Teri shikayaton par muskuraya bahut tha.<br>
+   Aaj teri yaadon mein kho jaata hoon,<br>
+   Kaash tujhe ek baar phir gale laga paata. 🥹
+  </div>
+ </div>
+
+ <div class="card">
+  <div class="poetry">
+   Kabhi roothna kabhi manana,<br>
+   Kabhi ladna kabhi gale lagana.<br>
+   Ye bhai-behan ka rishta hi kuch aisa hai,<br>
+   Door rehkar bhi ek doosre ko dil mein basana. 🫰
+  </div>
+ </div>
+
+ <div class="card">
+  <div class="poetry">
+   Ek ghar tha jahan roz shor hota tha,<br>
+   Kabhi jhagda kabhi hasi ka daur hota tha.<br>
+   Aaj door rehkar samajh aaya mujhe,<br>
+   Wahi shor meri zindagi ka sabse haseen daur tha. 💙
+  </div>
+ </div>
+
+ <div class="card">
+  <div class="poetry">
+   Teri har khushi mein meri khushi rahe,<br>
+   Tere har sapne mein roshni rahe.<br>
+   Bhagwan tujhe itni khushiyan de,<br>
+   Teri zindagi mein kabhi kami na rahe. 🙏
+  </div>
+ </div>
+
+ <div class="card">
+  <div class="poetry">
+   Na dooriyan is rishte ko kam kar sakti hain,<br>
+   Na waqt bachpan ki yaadon ko mita sakta hai.<br>
+   Tu hamesha meri Didi rahegi,<br>
+   Ye rishta koi kabhi badal nahi sakta. 🧿
+  </div>
+ </div>
+</section>
+
+<!-- SPECIAL LETTER -->
+<section>
+ <div class="surprise">
+  <div style="font-size:60px">💌</div>
+  <h2 class="heading">Ek Aakhri Khat...</h2>
+  <p class="subtitle">Ye baat shayad main saamne baithkar kabhi nahi keh paata.</p>
+
+  <button class="btn" onclick="openLetter()">
+   💌 Read My Heart
+  </button>
+
+  <div class="hidden" id="letter">
+   <div class="card">
+    <h3>Meri Pyari Suman Didi 🥰</h3>
+    <p>
+     Pata nahi waqt itni jaldi kaise beet gaya.
+
+     Ek waqt tha jab hum dono ek hi ghar mein rehte the.
+     Roz milte the, ladte the, haste the aur ek doosre ko pareshan karte the.
+
+     Aur aaj main apni duty ki wajah se itni door hoon.
+     Kabhi-kabhi ghar aane ka bhi waqt nahi milta.
+
+     Main shayad tumhe har baar bata nahi pata,
+     lekin tum sabki bahut yaad aati hai.
+
+     Agar maine tumhe kabhi dukh diya hai to dil se sorry.
+
+     Main chahta hoon tumhari zindagi mein kabhi kisi cheez ki kami na ho.
+     Tumhare saare sapne poore hon aur tum hamesha khush raho.
+
+     Main wada karta hoon ki apni taraf se hamesha tumhara saath dene ki koshish karunga.
+
+     <br><br>
+     <span class="pink">
+     Bachpan mein tumhe bahut pareshan kiya hai...
+     lekin aaj dil se chahta hoon ki tumhari zindagi mein
+     kabhi koi pareshani na aaye. 💙
+     </span>
+
+     <br><br>
+     Bhagwan tumhe lambi umar, achhi sehat
+     aur duniya ki har khushi de.
+
+     <br><br>
+     Happy Birthday meri pyari Suman Didi! 🥰
+
+     <br><br>
+     Tumhara wahi purana shaitaan bhai. 😂
+    </p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- FINAL -->
+<section>
+ <h2 class="heading">🎂 Happy Birthday Suman Didi!</h2>
+
+ <div class="card" style="text-align:center">
+  <div style="font-size:65px">🎂🌸🦋</div>
+
+  <div class="poetry">
+   Teri zindagi phoolon ki tarah mehakti rahe,<br>
+   Har subah nayi khushiyan lekar aaye.<br>
+   Bhagwan rakhe tujhe apni chhaon mein,<br>
+   Tera har sapna haqeeqat ban jaaye. 🧿
+  </div>
+
+  <hr style="border-color:#ffffff33;margin:25px 0">
+
+  <h2 style="font-family:'Dancing Script';font-size:45px;color:#ffdda5">
+   Miss U Suman Didi! 🥰
+  </h2>
+
+  <p>Hamesha khush rehna meri pyari Didi. 🫂</p>
+
+  <button class="btn" onclick="celebrate()">
+   🎆 Celebrate Again
+  </button>
+ </div>
+</section>
+
+<footer>
+ <div style="font-size:45px">🫰🧿💙</div>
+ <h2>Tumhara Bhai Deepu</h2>
+ <p>Ye sirf ek birthday gift nahi...</p>
+ <p>Hamari bachpan ki yaadon ka ek chhota sa hissa hai.</p>
+ <p>Distance can never change our bond.</p>
+ <p style="margin-top:15px;color:#ffb6d4">
+  MISS U DIDI 🥰
+ </p>
+ <p style="color:#ffb6d4;margin-top:20px">
+  Made with love, memories and a little childhood mischief. 😂
+ </p>
+</footer>
+
+<script>
+function go(id){
+ document.getElementById(id).scrollIntoView({
+  behavior:'smooth'
+ });
+}
+
+// Photo loading error
+function imageError(img,name){
+ const box=img.parentElement;
+ box.innerHTML=
+ '<div class="image-error">📷<br><br>'+
+ 'Tasveer load nahi ho paayi 🥹<br>'+
+ '<small>'+name+'</small><br><br>'+
+ '<small>GitHub mein filename check karein.</small></div>';
+}
+
+// Floating emojis
+const effects=document.getElementById('effects');
+const symbols=['🫰','🧿','💙','🥰','🌸','🦋','✨','💜','🌹'];
+
+function makeFall(){
+ const e=document.createElement('span');
+ e.className='fall';
+ e.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+ e.style.left=Math.random()*100+'%';
+ e.style.fontSize=(15+Math.random()*22)+'px';
+ e.style.animationDuration=(5+Math.random()*7)+'s';
+ effects.appendChild(e);
+ setTimeout(()=>e.remove(),13000);
+}
+setInterval(makeFall,450);
+
+// Surprise letter
+function openLetter(){
+ document.getElementById('letter').classList.toggle('show');
+ celebrate();
+}
+
+// Birthday celebration
+function celebrate(){
+ for(let i=0;i<100;i++){
+  setTimeout(()=>{
+   const e=document.createElement('span');
+   e.className='fall';
+   e.textContent=['🎉','🫰','💙','🎊','✨','🌸','🧿'][Math.floor(Math.random()*7)];
+   e.style.left=Math.random()*100+'%';
+   e.style.fontSize=(18+Math.random()*26)+'px';
+   e.style.animationDuration=(3+Math.random()*5)+'s';
+   effects.appendChild(e);
+   setTimeout(()=>e.remove(),9000);
+  },i*25);
+ }
+}
+</script>
+
+</body>
+  </html>
+  
